@@ -1,0 +1,70 @@
+Rules of Four-In-A-Row
+======================
+
+(also known as "Connect Four")
+
+A turn-based game for two players.
+  
+Each player is identified by tokens of a particular colour, Red and Yellow.
+
+The game board is a grid, 7 cells wide and 6 cells high.
+
+Red goes first.
+
+Each player places a token of their colour into the grid.
+Tokens can only be placed in the lower-most empty cell of any given column.
+Each cell can only contain a single token.
+Once placed, a token remains in position for the remainder of the game.
+
+Thus, the player's decision is to choose of the seven columns to play in
+(but it is not possible to play in a column which is already full).
+
+The aim of the game is to create a line (horizontally, vertically, or diagonally)
+of four or more tokens of your colour, without gaps.
+
+The game ends as soon as one player achieves this goal (in which case, that player wins),
+or when no lines have been made but the board is full (in which case, no more moves are possible, and the result is a draw).
+
+Specification
+-------------
+
+Display output to System.out (flushed), and receive input from System.in.
+
+At the start of each turn, display the current state of the board.
+
+Then display whose turn it is by outputting either "Red's turn" or "Yellow's turn".
+
+Then read input, expecting a column number 1-7 (1 being the leftmost column).
+
+If the move not valid, show "Try again", and go back to reading input.
+If the move is valid, show "OK".
+
+Add the player's token to the chosen column.
+
+If the game is over, display "Game over", then the current state of the board, then one of "Red wins", "Yellow wins", or "It's a draw", then exit.
+
+If the game is not over, start the next turn.
+
+Displaying the board
+--------------------
+
+When displaying the board, use a simple character grid: six lines of output, each line containing seven characters.
+Use "r" for a cell occupied by a red token, "y" for yellow, and "." for an empty cell.
+
+For example:
+
+.......
+.......
+.......
+....r..
+....r..
+y..ry..
+
+Here's a board of a game that's just been won by yellow:
+
+.......
+.......
+.......
+.......
+.rrr...
+ryyyy..
