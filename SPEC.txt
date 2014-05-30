@@ -5,25 +5,24 @@ Rules of Four-In-A-Row
 
 A turn-based game for two players.
   
-Each player is identified by tokens of a particular colour, Red and Yellow.
+Each player is identified by tokens of a particular colour.
+One player is Red, one is Yellow.
 
 The game board is a grid, 7 cells wide and 6 cells high.
 
 Red goes first.
 
-Each player places a token of their colour into the grid.
+On their turn, the player places a token of their colour into the grid.
 Tokens can only be placed in the lower-most empty cell of any given column.
-Each cell can only contain a single token.
-Once placed, a token remains in position for the remainder of the game.
+Each cell can only contain a single token.  Once placed, a token remains in position for the remainder of the game.
 
-Thus, the player's decision is to choose of the seven columns to play in
-(but it is not possible to play in a column which is already full).
+Thus, the player's decision is to choose of the seven columns to play in (but it is not possible to play in a column which is already full).
 
-The aim of the game is to create a line (horizontally, vertically, or diagonally)
-of four or more tokens of your colour, without gaps.
+The aim of the game is to create a line (horizontally, vertically, or diagonally) of four or more tokens of your colour, without gaps.
 
-The game ends as soon as one player achieves this goal (in which case, that player wins),
-or when no lines have been made but the board is full (in which case, no more moves are possible, and the result is a draw).
+The game ends as soon as one player achieves this goal (in which case, that player wins), or when no lines have been made but the board is full (in which case, no more moves are possible, and the result is a draw).
+
+Note that it is not possible for *both* players to have made a line of four, since the game would have ended with whichever player achieved this first.
 
 Specification
 -------------
@@ -49,6 +48,7 @@ Displaying the board
 --------------------
 
 When displaying the board, use a simple character grid: six lines of output, each line containing seven characters.
+
 Use "r" for a cell occupied by a red token, "y" for yellow, and "." for an empty cell.
 
 For example:
@@ -68,3 +68,6 @@ Here's a board of a game that's just been won by yellow:
 .......
 .rrr...
 ryyyy..
+
+-----------
+End of spec
